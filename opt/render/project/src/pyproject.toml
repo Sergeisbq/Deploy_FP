@@ -1,10 +1,9 @@
 [tool.poetry]
-name = "deploy-fp"
+name = "src"
 version = "0.1.0"
 description = ""
 authors = ["Your Name <you@example.com>"]
 readme = "README.md"
-packages = [{include = "deploy_fp"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
