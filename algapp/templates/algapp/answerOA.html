@@ -1,24 +1,23 @@
 {% extends 'algapp/base.html' %}
 
-
- 
 {% block content %}
 
-<h2>{{response.name}}</h2><br>
-<div id="container_re">
-    <div id="container_re_inside">
-        <h3>Ingridients</h3>
+<br>
+<div class="menu-container">
+    <h2>{{response.name}}</h2>
+    <div id="boxesAOAI">
+        <h3>Ingridients:</h3>
         {% for item in response.ingredients%}
-
-        <ul>
-            <li>{{item}}</li>
-        </ul>
-
+            {% if forloop.last %}
+                {{item}}.
+            {% else %}
+                {{item}},
+            {% endif %}
         {% endfor %}
     </div>
-    <br>
-    <div id="container_re_inside">
-        <h3>Instructions</h3>
+    <hr>
+    <div id="boxesAOAI">
+        <h3>Instructions:</h3>
         {% for item in response.instructions%}
 
         <ul>

@@ -8,32 +8,34 @@
 {% endfor %}
 
 <!-- <script>
-    let checkboxes = document.getElementsByClassName('allergen-checkbox');
-    let checkboxesPerPage = 5;
-    let currentPage = 1;
-    let totalPages = Math.ceil(checkboxes.length / checkboxesPerPage);
-    console.log(checkboxes.length);
-    let showMoreButton = document.getElementById('show-more-button');
 
-    function showPage(page) {
-        let startIndex = (page - 1) * checkboxesPerPage;
-        let endIndex = startIndex + checkboxesPerPage;
+let checkboxes = document.getElementsByClassName('allergen-checkbox');
+let checkboxesPerPage = 5;
+let currentPage = 1;
+let totalPages = Math.ceil(checkboxes.length / checkboxesPerPage);
+console.log(checkboxes.length);
+let showMoreButton = document.getElementById('show-more-button');
 
-        for (let i = 0; i < checkboxes.length; i++) {
-            checkboxes[i].parentNode.style.display = (i >= startIndex && i < endIndex) ? 'block' : 'none';
+function showPage(page) {
+    let startIndex = (page - 1) * checkboxesPerPage;
+    let endIndex = startIndex + checkboxesPerPage;
+
+    for (let i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].parentNode.style.display = (i >= startIndex && i < endIndex) ? 'block' : 'none';
+    }
+}
+
+showPage(currentPage);
+
+if (totalPages > 1) {
+    showMoreButton.style.display = 'block';
+    showMoreButton.addEventListener('click', function () {
+        currentPage++;
+        if (currentPage > totalPages) {
+            currentPage = 1;
         }
-    }
+        showPage(currentPage);
+    });
+}
 
-    showPage(currentPage);
-
-    if (totalPages > 1) {
-        showMoreButton.style.display = 'block';
-        showMoreButton.addEventListener('click', function () {
-            currentPage++;
-            if (currentPage > totalPages) {
-                currentPage = 1;
-            }
-            showPage(currentPage);
-        });
-    }
 </script> -->

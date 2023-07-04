@@ -1,7 +1,8 @@
 {%extends 'algapp/base.html'%}
 
 {%block content%}
-<div class="rectangle2add"></div><h1 class="h1radd">Type the name and address of your restaurant<br> (the dishes will be added automatically)</h1>
+
+<div class="rectangle2add"></div><h1 class="h1radd">Type the name and address of your restaurant</h1>
     <form class="form_add_c" method="post"> 
         {%csrf_token%}
             {{form}}

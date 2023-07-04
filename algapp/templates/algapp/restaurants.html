@@ -3,7 +3,6 @@
 
 {%block content%}
 
-<!-- <div class="/"><h1>There are list of our restaurants</h1></div> -->
 <div class="rectangle2"></div><h1 class="h1rsp">There are list of our restaurants</h1>
     <div class="home_page_c">
         <div class="list_of_rest">
@@ -13,7 +12,7 @@
                     <th>Address</th>
                     {% for p in rests%}
                     <tr>
-                        <td ><a href="{% url 'restaurant' p.pk %}">{{p.name}} </a></td>
+                        <td ><a class="link_rests" href="{% url 'restaurant' p.pk %}">{{p.name}} </a></td>
                         
                         <td > {{p.address}} </td>
 
@@ -29,10 +28,5 @@
     <button class="add_rest_b" type="submit"><a href="{% url 'add_restaurant' %}">Add a restaurant</a></button>
     {% endif %}
 </div>
-
-
-
-
-
 
 {%endblock content%}

@@ -2,23 +2,21 @@
 
 {%block content%}
 
-
 <div class="restaurant-profile">
-
-    
-    
     <div class="menu">
       <h2>Restaurant Profile</h2>
+      <br>
       <div class="restaurant-info">
-        <p>Username: {{rest_user.username}}</p>
-        <p>Name: {{rest_customer.name}}</p>
-        <p>Address: {{rest_customer.address}}</p>
+        <h4>{{rest_customer.name}}</h4>
+        <h4>Address: {{rest_customer.address}}</h4>
+        <br>
         <a href="{% url 'update_restaurant' %}">Update Restaurant's information</a><br>
         <a href="{% url 'add_dish' %}">Add dish</a>
       </div>
+      <hr>
+      <hr>
       <h3>Menu</h3>
-      <hr>
-      <hr>
+      
       <br>
         {% for dish in dishes %}
           <div class="wrapper_3">
@@ -40,7 +38,7 @@
                 {% endfor %}
               </p>
             
-            <form class="dish-btn-box" action="{% url 'delete_dish' dish.id %}" method="post">
+            <form class="dish-btn-box" action="{% url 'delete_dish' dish.id %}" method="post" onsubmit="return confirmDelete('{{ dish.name }}')">
               {% csrf_token %}
               <button  type="submit">Delete</button>
             </form>
@@ -51,10 +49,13 @@
     </div>
 </div>
 
+<script>
 
+function confirmDelete(dishName) {
+    return confirm('Do you want to delete ' + dishName + '?');
+}
 
-
-
+</script>
 
 {%endblock content%}
 

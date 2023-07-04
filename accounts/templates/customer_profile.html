@@ -1,20 +1,35 @@
 {%extends 'base.html'%}
 
 {%block content%}
-<h1> Profile: <small>  </small> </h1>
-<p>Username: {{user.username}}</p>
-<p>Firstname: {{customer.first_name}}</p>
-<p>Lastname: {{customer.last_name}}</p>
-<p>Email: {{customer.email}}</p>
-<h2>Allergens:</h2>
-<ul>
-{% for allergen in customer.allergens.all %}
-    <li>{{ allergen.name }}</li>
-{% empty %}
-    <li>No allergens found.</li>
-{% endfor %}
-</ul>
-<a href="{% url 'update_customer' %}">Update Profile</a>
+
+<br>
+<div class="contentCP">
+<div class="restaurant-profile">
+    <div class="menu">
+        <h2>Profile</h2>
+        <p>Username:  <b>{{user.username}}</b></p>
+        <p>First name:  <b>{{customer.first_name}}</b></p>
+        <p>Last name:  <b>{{customer.last_name}}</b></p>
+        <p>E-mail:  <b>{{customer.email}}</b></p>
+        <br>
+        <div class="restaurant-info">
+            <h4>Your allergens:</h4>
+                {% for allergen in customer.allergens.all %}
+                    {% if forloop.last %}
+                        {{ allergen.name }}.
+                    {% else %}
+                        {{ allergen.name }},
+                    {% endif %}
+                {% empty %}
+                    <p>No allergens found.</p>
+                {% endfor %}
+            <br>
+            <br>
+            <a href="{% url 'update_customer' %}" class="link_cp button-link">Update Profile</a>
+        </div>
+    </div>
+</div>
+</div>
 
 {%endblock content%}
 

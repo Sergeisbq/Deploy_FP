@@ -18,8 +18,6 @@ from . import views
 from .views import add_customer_view, rest, one_rest, add_rest_view, ask_chatGPT, update_profile_view, update_restaurant_view, add_dish_view, update_dish_view, add_ingredient, delete_dish_view, one_rest_no_red
 
 
-
-
 urlpatterns = [
     path('', views.home, name="home_path"),
     path("add_customer/", add_customer_view, name='add_customer'),

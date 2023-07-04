@@ -6,14 +6,12 @@ from .models import UserProfile
 from algapp.models import Customer, Restaurant, Menu
 from .forms import ProfileForm
 from django.contrib.auth.decorators import login_required
-# Create your views here.
 
 
 # class ProfileView(DetailView):
 #     model = UserProfile
 #     template_name = 'profile.html'
 #     context_object_name = 'profile'
-
 
 
 @login_required

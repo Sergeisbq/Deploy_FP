@@ -13,7 +13,6 @@
         <div id="boxes"> 
             {% csrf_token %}
             {% for dish, allergic_v, ingredients_main, ingredients_var in dishes_allergens %}
-
                     <div class="content1">
                         <div class="dish-info">
                             <div class="dish-name">
@@ -62,6 +61,7 @@
                             {% endfor %}
                         </div>
                     </div>
+                    <hr class="hr_line">
                 {% empty %}
                 <div class="content1">
                     <p><b>Unfortunately, there are no such dishes</b></p>
@@ -71,18 +71,13 @@
     </div>
 </div>
 
-  
-
-
-
-
 {%endblock content%}
 
 {% block js_files %} 
 
-    <script>
+<script>
     
-    function showPopup(event) {
+function showPopup(event) {
     const target = event.target;
     const popup = target.parentNode.querySelector('.popup');
     if (popup) {
@@ -90,7 +85,7 @@
     }
 }
 
-    function hidePopup(event) {
+function hidePopup(event) {
     const target = event.target;
     const popup = target.parentNode.querySelector('.popup');
     if (popup) {
@@ -98,6 +93,6 @@
     }
 }
 
-    </script>
+</script>
 
 {% endblock %}

@@ -31,22 +31,6 @@ class CustomerForm(forms.ModelForm):
         return queryset
 
 
-
-
-
-
-# class CustomerForm(forms.ModelForm):
-
-#     class Meta: 
-#         model = Customer
-#         fields = ('first_name', 'last_name', 'email', 'user')
-#         widgets = {
-#             'user': forms.HiddenInput(),
-#         }
-        
-#     allergens = forms.ModelMultipleChoiceField(queryset=Ingredients.objects.all().order_by('name'), widget=forms.CheckboxSelectMultiple) 
-
-
 class RestAddForm(forms.ModelForm):
 
     class Meta: 
@@ -58,9 +42,7 @@ class RestAddForm(forms.ModelForm):
 
 
 class DishAddForm(forms.ModelForm):
-    search_query = forms.CharField(required=False, label='Search Main Ingredients of the Dish')
     
-
     class Meta: 
         model = DishesIng
         fields = ('name',)
@@ -70,6 +52,8 @@ class DishAddForm(forms.ModelForm):
     # dish_main_ingredients = forms.ModelMultipleChoiceField(queryset=Ingredients.objects.all().order_by('name'), label='Main Ingredients of the Dish') 
     # dish_var_ingredients = forms.ModelMultipleChoiceField(queryset=Ingredients.objects.all().order_by('name'), label='Variable Ingredients of the Dish')
 
+    search_query = forms.CharField(required=False, label='Search Main Ingredients of the Dish')
+
     dish_main_ingredients = forms.ModelMultipleChoiceField(
         queryset=Ingredients.objects.all().order_by('name'),
         widget=forms.CheckboxSelectMultiple(attrs={'class': 'allergen-checkbox scroll-div'}),
@@ -77,6 +61,7 @@ class DishAddForm(forms.ModelForm):
     )
 
     search_query_2 = forms.CharField(required=False, label='Search Variable Ingredients of the Dish')
+
     dish_var_ingredients = forms.ModelMultipleChoiceField(
         queryset=Ingredients.objects.all().order_by('name'),
         widget=forms.CheckboxSelectMultiple(attrs={'class': 'allergen-checkbox scroll-div'}),

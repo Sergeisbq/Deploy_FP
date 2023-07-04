@@ -4,7 +4,6 @@
 
 <div class="rest_p">
     <div class="rp_h1"><h1>Restaurant {{r.name}} </h1>
-
         {%csrf_token%}
         {{r.address}} 
     </div>
@@ -34,16 +33,12 @@
                     {% endif %}
                 {% endfor %}</p>
             </div>
+            <hr class="hr_line">
             {% endfor %}
         </div>
     </div>
-    <div>
-
-    </div>
 </div>
     
-
-
 {%endblock content%}
 
 

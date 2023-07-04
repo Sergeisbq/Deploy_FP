@@ -1,6 +1,7 @@
 {%extends 'algapp/base.html'%}
 
 {%block content%}
+
 <div class="rectangle3add"></div><h1 class="h1cadd">Here you could change the name and the ingredients of the dish</h1>
     <form class="form_add_c" method="post"> 
         {%csrf_token%}
@@ -38,12 +39,15 @@ allergenCheckboxes.forEach(function(checkbox) {
     let allergenName = checkbox.parentElement.textContent.toLowerCase();
     if (allergenName.includes(searchQuery)) {
         checkbox.parentElement.style.display = 'block'; 
-    } else {
+    } 
+    else {
         checkbox.parentElement.style.display = 'none';   
     }
 });
 });
+
 </script>
+
 {% block extra_widgets %}
 {% include 'django/forms/widgets/checkbox_select_multiple.html' %}
 {% endblock extra_widgets %}

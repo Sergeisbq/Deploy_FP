@@ -1,40 +1,35 @@
 {%extends 'algapp/base.html'%}
-
+{% load static %}
 {%block content%}
 
-<style>
-    .under_the_btn {
-        
-        text-align: center;
-    }
-</style>
+
+<br>
+<br>
+<br>
+<br>
 <br>
 <div class="choose_acc">
     <div class="form-container2"><br>
-        <form method="get" action="{% url 'add_customer' %}">
-            {% csrf_token %}
-            
-            <button type="submit" name="process_button">Personal account</button><br>
-            <p class="under_the_btn">If you want to connect to the AllerGuard as a person<br> and use the service to make your life easier</p>
-        </form>
-    </div><br><br><br>
-    <div class="form-container2">
-
-            <form method="get" action="{% url 'add_restaurant' %}">
-            {% csrf_token %}
-            
-            <button type="submit" name="process_button">Business account</button><br>
-            <p class="under_the_btn">If you want to become a part of AllerGuard as a restaurant<br> to provide your clients the best service</p>
+        <a class="link_cp" href="{% url 'add_customer' %}">
+            <form method="get" action="{% url 'add_customer' %}">
+                {% csrf_token %}
+                
+                <p class="under_the_btn">If you want to connect to the AllerGuard as a person<br> and use the service to make your life easier</p>
+                <img src="{% static 'algapp/images/customer.png' %}" width="100px"><br>
             </form>
-
-
-            
-
+        </a>
+    </div><br><br><br>
+    <div class="form-container2"><br>
+        <a class="link_cp" href="{% url 'add_restaurant' %}">
+            <form method="get" action="{% url 'add_restaurant' %}">
+                {% csrf_token %}
+                
+                <p class="under_the_btn">If you want to become a part of AllerGuard as a restaurant<br> to provide your clients the best service</p>
+                <img src="{% static 'algapp/images/restaurant.png' %}" width="100px"><br>
+            </form>
+        </a>
     </div>
-    
 </div>
-
-
 
 {%endblock content%}
 

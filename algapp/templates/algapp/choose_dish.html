@@ -1,23 +1,13 @@
-
 {%extends 'algapp/base.html'%}
 {% load static %}
 {%block content%}
 
-<style>
-    .allergen-warning {
-        color: red;
-    }
-    
-    .modifiable-allergen-warning {
-        color: orange;
-    }
-</style>
 
 <div class="menu">
     <h2>Adapted menu</h2>
 </div>
 <div class="rest_p">
-    <div class="form-container"><br>
+    <div class="form-container">
         <form method="post" action="{% url 'one_rest_no_red' r.id%}">
             {% csrf_token %}
             
@@ -95,41 +85,34 @@
               </div>
             </div>
           </div>
+          <hr class="hr_line">
         {% endfor %}
       </div>
     </div>
   </div>
   
-  
-
-
-
-
-
-    
-    
 {%endblock content%}
 
 {% block js_files %} 
 
-    <script>
-    
-    function showPopup(event) {
-    const target = event.target;
-    const popup = target.parentNode.querySelector('.popup');
-    if (popup) {
-        popup.style.display = 'block';
-    }
+<script>
+  
+function showPopup(event) {
+  const target = event.target;
+  const popup = target.parentNode.querySelector('.popup');
+  if (popup) {
+      popup.style.display = 'block';
+  }
 }
 
 function hidePopup(event) {
-    const target = event.target;
-    const popup = target.parentNode.querySelector('.popup');
-    if (popup) {
-        popup.style.display = 'none';
-    }
+  const target = event.target;
+  const popup = target.parentNode.querySelector('.popup');
+  if (popup) {
+      popup.style.display = 'none';
+  }
 }
 
-    </script>
+</script>
 
 {% endblock %}

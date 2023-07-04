@@ -1,19 +1,19 @@
 {
-    "id": "cmpl-7YVK0kYbWEwRkPNMOm2LvSu0LEifB",
+    "id": "cmpl-7YdN4Eu3YLTP7HV1mWbDpuxgfjFPD",
     "object": "text_completion",
-    "created": 1688457908,
+    "created": 1688488850,
     "model": "text-davinci-003",
     "choices": [
         {
-            "text": "\n\n{\n  \"name\": \"Falafel\",\n  \"ingredients\": [\n    \"Chickpeas\",\n    \"Garlic\",\n    \"Onion\",\n    \"Cumin\",\n    \"Coriander\",\n    \"Cayenne pepper\",\n    \"Salt\",\n    \"Flour\",\n    \"Baking powder\"\n  ],\n  \"instructions\": [\n    \"Soak the chickpeas overnight in a bowl of water.\",\n    \"Drain the chickpeas and add them to a food processor.\",\n    \"Add the garlic, onion, cumin, coriander, cayenne pepper, and salt to the food processor.\",\n    \"Process the ingredients until they are finely chopped.\",\n    \"Add the flour and baking powder to the mixture and process until it forms a thick paste.\",\n    \"Form the mixture into small balls and flatten them into patties.\",\n    \"Heat a pan over medium heat and add a few tablespoons of oil.\",\n    \"Fry the falafel patties for 3-4 minutes on each side until golden brown.\",\n    \"Serve the falafel with your favorite toppings and enjoy!\"\n  ]\n}",
+            "text": "\n\n{\n  \"ingredients\": [\"fish fillets\", \"flour\", \"salt\", \"egg\", \"breadcrumbs\", \"oil\"],\n  \"instructions\": [\n    \"1. Preheat the oven to 375 degrees F (190 degrees C).\",\n    \"2. Rinse the fish fillets and pat dry with paper towels.\",\n    \"3. In a shallow bowl, mix together the flour, salt, and pepper.\",\n    \"4. In a separate shallow bowl, beat the egg.\",\n    \"5. Place the breadcrumbs in a third shallow bowl.\",\n    \"6. Dip the fish fillets in the flour mixture, then the egg, and finally the breadcrumbs.\",\n    \"7. Heat the oil in a large skillet over medium-high heat.\",\n    \"8. Fry the fish fillets in the hot oil for 3 to 4 minutes on each side, or until golden brown and the fish flakes easily with a fork.\"\n  ]\n}",
             "index": 0,
             "logprobs": null,
             "finish_reason": "stop"
         }
     ],
     "usage": {
-        "prompt_tokens": 27,
-        "completion_tokens": 265,
-        "total_tokens": 292
+        "prompt_tokens": 35,
+        "completion_tokens": 214,
+        "total_tokens": 249
     }
 }

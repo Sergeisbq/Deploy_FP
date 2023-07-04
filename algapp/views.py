@@ -38,7 +38,6 @@ def add_customer_view(request):
         return render(request, 'algapp/add_customer.html', context)
 
     
-
 def update_profile_view(request):
     customer = Customer.objects.get(user_id=request.user.id)
 
@@ -98,7 +97,6 @@ def add_rest_view(request):
         return redirect('restaurant_profile')
         # return HttpResponseRedirect('/add_restaurant')
     
-
     if request.method == 'GET':
         print(request.user)
         rest_filled_form = RestAddForm() 
@@ -176,7 +174,6 @@ def rest (request):
     context={'rests': rests}
     return render(request, 'algapp/restaurants.html', context)
  
-
 
 def one_rest(request, r_id):
     r = Restaurant.objects.get(pk=r_id)
@@ -263,12 +260,12 @@ def ask_chatGPT(request):
                 allergens.append(allergen.name)
             promt2 = f" without {allergens}"
             print(promt2)
-            print(promt1 + ' ' + data['prompt'] + promt2 + ' response as a JSON')
+            print(promt1 + ' ' + data['prompt'] + promt2 + ' response as a JSON with lowercase keys')
 
             
             response = openai.Completion.create(
                 model="text-davinci-003",
-                prompt=promt1 + ' ' + data['prompt'] + promt2 + ' response as a JSON',
+                prompt=promt1 + ' ' + data['prompt'] + promt2 + ' response as a JSON with lowercase keys',
                 temperature=0,
                 max_tokens=1500,
                 top_p=1.0,
@@ -276,7 +273,7 @@ def ask_chatGPT(request):
                 presence_penalty=0.0,
                 stop=["###"]
             )
-            print('This is a prompt ' + promt1 + data['prompt'] + ' response as a JSON')
+            print('This is a prompt ' + promt1 + data['prompt'] + ' response as a JSON with lowercase keys')
             json_object = json.dumps(response, indent=4)
 
             with open("sample.json", "w") as outfile:
@@ -302,7 +299,6 @@ def ask_chatGPT(request):
     else:
         # return JsonResponse({'error': 'Invalid request method'}, status=405)
         return render(request, 'algapp/openai.html', {})
-
 
 
 def add_dish_view(request):
@@ -349,7 +345,6 @@ def add_dish_view(request):
         return render(request, 'algapp/add_dish.html', context)
     
 
-
 def update_dish_view(request, d_id):
     dish = DishesIng.objects.get(id=d_id)
     dish_main_ingredients = dish.dish_main_ingredients.all()
@@ -381,7 +376,8 @@ def update_dish_view(request, d_id):
                                                 })
         context = {'form': dish_filled_form}
         return render(request, 'algapp/update_dish.html', context)
-    
+
+
 def delete_dish_view(request, dish_id):
     dish = get_object_or_404(DishesIng, id=dish_id)
 
@@ -391,6 +387,7 @@ def delete_dish_view(request, dish_id):
 
     context = {'dish': dish}
     return render(request, 'algapp/delete_dish.html', context)
+
 
 def add_ingredient(request):
     if request.method == 'POST':
