@@ -387,8 +387,8 @@ button[type="submit"]:hover {
 
 .menu {
     margin-bottom: 20px;
-    background-color: #f2f2f200;
-    padding: 20px 20px 0px 20px;
+    background-color: #f2f2f207;
+    padding: 20px 2px 0px 20px;
     border-radius: 5px;
     width: 100%;
     text-align: center;
@@ -733,10 +733,12 @@ div#id_allergens, div.scroll-div {
     border-radius: 3px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-decoration: none;
 }
   
 .button-link:hover {
     background-color: #ecabbb;
+    text-decoration: none;
 }
   
 

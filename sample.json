@@ -1,19 +1,19 @@
 {
-    "id": "cmpl-7YdN4Eu3YLTP7HV1mWbDpuxgfjFPD",
+    "id": "cmpl-7YfFgMj9uT9Jjk7GhtDMfDgMu3TIE",
     "object": "text_completion",
-    "created": 1688488850,
+    "created": 1688496080,
     "model": "text-davinci-003",
     "choices": [
         {
-            "text": "\n\n{\n  \"ingredients\": [\"fish fillets\", \"flour\", \"salt\", \"egg\", \"breadcrumbs\", \"oil\"],\n  \"instructions\": [\n    \"1. Preheat the oven to 375 degrees F (190 degrees C).\",\n    \"2. Rinse the fish fillets and pat dry with paper towels.\",\n    \"3. In a shallow bowl, mix together the flour, salt, and pepper.\",\n    \"4. In a separate shallow bowl, beat the egg.\",\n    \"5. Place the breadcrumbs in a third shallow bowl.\",\n    \"6. Dip the fish fillets in the flour mixture, then the egg, and finally the breadcrumbs.\",\n    \"7. Heat the oil in a large skillet over medium-high heat.\",\n    \"8. Fry the fish fillets in the hot oil for 3 to 4 minutes on each side, or until golden brown and the fish flakes easily with a fork.\"\n  ]\n}",
+            "text": "\n\n{\n  \"ingredients\": [\n    \"Fish fillets\",\n    \"Flour\",\n    \"Salt\",\n    \"Pepper\",\n    \"Egg\",\n    \"Breadcrumbs\",\n    \"Oil for frying\",\n    \"Potatoes\"\n  ],\n  \"instructions\": [\n    \"Cut the potatoes into chips and fry them in hot oil until golden brown.\",\n    \"Mix the flour, salt, and pepper in a shallow bowl.\",\n    \"Beat the egg in a separate bowl.\",\n    \"Dip the fish fillets in the egg, then coat them in the flour mixture.\",\n    \"Dip the fish fillets in the egg again, then coat them in the breadcrumbs.\",\n    \"Fry the fish fillets in hot oil until golden brown.\",\n    \"Serve the fish and chips together.\"\n  ]\n}",
             "index": 0,
             "logprobs": null,
             "finish_reason": "stop"
         }
     ],
     "usage": {
-        "prompt_tokens": 35,
-        "completion_tokens": 214,
-        "total_tokens": 249
+        "prompt_tokens": 29,
+        "completion_tokens": 193,
+        "total_tokens": 222
     }
 }

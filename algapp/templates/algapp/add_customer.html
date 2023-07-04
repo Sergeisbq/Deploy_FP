@@ -5,11 +5,14 @@
 <div class="rectangle3add"></div>
 <h1 class="h1cadd">Please, type your full name, e-mail and choose the allergens from the list below<br>to get the ability to use our service</h1>
 <form class="form_add_c" method="post"> 
-  {% csrf_token %}
-  {{ form }}
-  <br>
-  <button type="submit">Create Profile</button>
+    {% csrf_token %}
+    {{ form }}
+    <br>
+    <a href="{% url 'add_ingredient' %}" class="button-link">Add Allergen</a>
+    <br>
+    <button type="submit">Create Profile</button>
 </form>
+
 
 {% endblock content %}
 

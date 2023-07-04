@@ -6,11 +6,15 @@
 <div class="contentCP">
 <div class="restaurant-profile">
     <div class="menu">
-        <h2>Profile</h2>
+        <h3>Profile</h3>
         <p>Username:  <b>{{user.username}}</b></p>
+        <hr>
         <p>First name:  <b>{{customer.first_name}}</b></p>
+        <hr>
         <p>Last name:  <b>{{customer.last_name}}</b></p>
+        <hr>
         <p>E-mail:  <b>{{customer.email}}</b></p>
+        <hr>
         <br>
         <div class="restaurant-info">
             <h4>Your allergens:</h4>
@@ -23,8 +27,9 @@
                 {% empty %}
                     <p>No allergens found.</p>
                 {% endfor %}
+                <hr>
             <br>
-            <br>
+
             <a href="{% url 'update_customer' %}" class="link_cp button-link">Update Profile</a>
         </div>
     </div>
