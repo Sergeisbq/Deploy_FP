@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'accounts',
     'django_private_chat2.apps.DjangoPrivateChat2Config',
     'django.forms',
+    'widget_tweaks',
 
 ]
 
@@ -148,7 +149,7 @@ STATIC_URL = '/static/'
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'static/algapp'),
 ]
 STATICFILES_DIRS += [
     os.path.join(BASE_DIR, 'opt/render/project/src/alg/static'),
