@@ -1,19 +1,19 @@
 {
-    "id": "cmpl-7YfFgMj9uT9Jjk7GhtDMfDgMu3TIE",
+    "id": "cmpl-7YuJAlysiayvGTzjGFngMhOMMOmyH",
     "object": "text_completion",
-    "created": 1688496080,
+    "created": 1688553956,
     "model": "text-davinci-003",
     "choices": [
         {
-            "text": "\n\n{\n  \"ingredients\": [\n    \"Fish fillets\",\n    \"Flour\",\n    \"Salt\",\n    \"Pepper\",\n    \"Egg\",\n    \"Breadcrumbs\",\n    \"Oil for frying\",\n    \"Potatoes\"\n  ],\n  \"instructions\": [\n    \"Cut the potatoes into chips and fry them in hot oil until golden brown.\",\n    \"Mix the flour, salt, and pepper in a shallow bowl.\",\n    \"Beat the egg in a separate bowl.\",\n    \"Dip the fish fillets in the egg, then coat them in the flour mixture.\",\n    \"Dip the fish fillets in the egg again, then coat them in the breadcrumbs.\",\n    \"Fry the fish fillets in hot oil until golden brown.\",\n    \"Serve the fish and chips together.\"\n  ]\n}",
+            "text": "\n\n{\n  \"ingredients\": [\n    \"fish fillets\",\n    \"flour\",\n    \"salt\",\n    \"egg\",\n    \"breadcrumbs\",\n    \"oil\"\n  ],\n  \"instructions\": [\n    \"In a shallow bowl, mix together the flour and salt.\",\n    \"In a separate bowl, beat the egg.\",\n    \"Dip the fish fillets in the egg, then coat with the flour mixture.\",\n    \"Dip the fish fillets in the egg again, then coat with the breadcrumbs.\",\n    \"Heat the oil in a large skillet over medium-high heat.\",\n    \"Fry the fish fillets in the hot oil until golden brown and cooked through, about 3 minutes per side.\"\n  ]\n}",
             "index": 0,
             "logprobs": null,
             "finish_reason": "stop"
         }
     ],
     "usage": {
-        "prompt_tokens": 29,
-        "completion_tokens": 193,
-        "total_tokens": 222
+        "prompt_tokens": 34,
+        "completion_tokens": 173,
+        "total_tokens": 207
     }
 }
