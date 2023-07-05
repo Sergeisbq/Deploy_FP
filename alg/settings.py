@@ -62,7 +62,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'alg.urls'
 
@@ -152,12 +152,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR, 'algapp/static/algapp'),
 # ]
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'static/algapp'),
-# ]
-# STATICFILES_DIRS += [
-#     os.path.join(BASE_DIR, 'opt/render/project/src/alg/static'),
-# ]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static/algapp'),
+]
+STATICFILES_DIRS += [
+    os.path.join(BASE_DIR, 'opt/render/project/src/alg/static'),
+]
 
 
 # Default primary key field type
