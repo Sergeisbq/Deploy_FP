@@ -147,3 +147,29 @@ function confirmDelete(dishName) {
 }
 
 </script>
+
+<style>
+
+
+.rectangle {
+    margin-top: 50px;
+    margin-left: 300px;
+    border: 3px solid #ecabbb;
+    width: 165px;
+    height: 90px;
+    animation: moveSides 1s infinite alternate;
+}
+
+@keyframes moveSides {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }
+    50% {
+        transform: translateX(5px) translateY(5px);
+    }
+    100% {
+        transform: translateX(0px) translateY(0px);
+    }
+}
+
+</style>
