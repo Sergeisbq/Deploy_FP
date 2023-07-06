@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'alg.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-db_key = os.getenv('DB_PASS_ES')
+# db_key = os.getenv('DB_PASS_ES')
 
 DATABASES = {
     # 'default': {
@@ -104,7 +104,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'jxmwrkcp',
         'USER': 'jxmwrkcp',
-        'PASSWORD': db_key,
+        'PASSWORD': os.getenv('DB_PASS_ES'),
         'HOST': 'lucky.db.elephantsql.com',
         'PORT': '5432',
     }
