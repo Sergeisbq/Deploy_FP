@@ -104,7 +104,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'jxmwrkcp',
         'USER': 'jxmwrkcp',
-        'PASSWORD': os.getenv('DB_PASS_ES'),
+        'PASSWORD': 'o9FJqyIgBkFdh-lHIMZr89IECliS5ojp',
         'HOST': 'lucky.db.elephantsql.com',
         'PORT': '5432',
     }
