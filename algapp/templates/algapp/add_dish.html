@@ -2,7 +2,8 @@
 
 {%block content%}
 
-<div class="rectangle3add"></div><h1 class="h1cadd">Please, type the name of the dish and choose ingredients 
+<br>
+<div class="rest_p"><h1 class="h1cadd">Please, type the name of the dish and choose ingredients 
     from lists below<br>if we don't have needed ingredient you could add it by yourself</h1>
     {% for dish in dishes %}
         <p><b>{{dish.name}}</b>
@@ -16,13 +17,12 @@
     <form class="form_add_c" method="post"> 
         {%csrf_token%}
             {{form}}
+        <br>
+        <a href="{% url 'add_ingredient' %}" class="button-link">Add New Ingredient</a>
+        <br>
         <button type="submit"> Add Dish </button>
     </form>
-    <form method="post" action="{% url 'add_ingredient' %}">
-        {% csrf_token %}
-        
-        <button type="submit" name="process_button">Add New Ingredient</button>
-    </form>
+</div>
 
 {%endblock content%}
 

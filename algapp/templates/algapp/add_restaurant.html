@@ -1,12 +1,12 @@
 {%extends 'algapp/base.html'%}
 
 {%block content%}
-
-<div class="rectangle2add"></div><h1 class="h1radd">Type the name and address of your restaurant</h1>
+<br>
+<div class="rest_p"><h1 class="h1radd">Type the name and address of your restaurant</h1>
     <form class="form_add_c" method="post"> 
         {%csrf_token%}
             {{form}}
-        <button type="submit"> Submit </button>
+        <button type="submit"> Add Restaurant </button>
     </form>
-
+</div>
 {%endblock content%}

@@ -1,11 +1,11 @@
 {
-    "id": "cmpl-7YuJAlysiayvGTzjGFngMhOMMOmyH",
+    "id": "cmpl-7aJYlN6KsyG7gHH4DaZ9zMcGROmsh",
     "object": "text_completion",
-    "created": 1688553956,
+    "created": 1688889351,
     "model": "text-davinci-003",
     "choices": [
         {
-            "text": "\n\n{\n  \"ingredients\": [\n    \"fish fillets\",\n    \"flour\",\n    \"salt\",\n    \"egg\",\n    \"breadcrumbs\",\n    \"oil\"\n  ],\n  \"instructions\": [\n    \"In a shallow bowl, mix together the flour and salt.\",\n    \"In a separate bowl, beat the egg.\",\n    \"Dip the fish fillets in the egg, then coat with the flour mixture.\",\n    \"Dip the fish fillets in the egg again, then coat with the breadcrumbs.\",\n    \"Heat the oil in a large skillet over medium-high heat.\",\n    \"Fry the fish fillets in the hot oil until golden brown and cooked through, about 3 minutes per side.\"\n  ]\n}",
+            "text": "\n\n{\n  \"ingredients\": [\n    \"Fish fillets\",\n    \"Flour\",\n    \"Salt\",\n    \"Egg\",\n    \"Breadcrumbs\",\n    \"Oil\",\n    \"Potatoes\"\n  ],\n  \"instructions\": [\n    \"1. Preheat the oven to 200\u00b0C/400\u00b0F/Gas Mark 6.\",\n    \"2. Cut the potatoes into chips and place them on a baking tray. Drizzle with oil and season with salt.\",\n    \"3. Bake in the oven for 25-30 minutes, or until golden and crispy.\",\n    \"4. Meanwhile, prepare the fish. Place the flour, salt and egg in separate shallow bowls. Dip the fish fillets in the flour, then the egg, and finally the breadcrumbs.\",\n    \"5. Heat the oil in a large frying pan over a medium heat. Fry the fish for 3-4 minutes on each side, or until golden and cooked through.\",\n    \"6. Serve the fish and chips with your favourite accompaniments.\"\n  ]\n}",
             "index": 0,
             "logprobs": null,
             "finish_reason": "stop"
@@ -13,7 +13,7 @@
     ],
     "usage": {
         "prompt_tokens": 34,
-        "completion_tokens": 173,
-        "total_tokens": 207
+        "completion_tokens": 235,
+        "total_tokens": 269
     }
 }

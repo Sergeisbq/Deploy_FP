@@ -2,11 +2,15 @@
 
 {%block content%}
 
-<div class="rectangle3add"></div><h1 class="h1cadd">Please, type your full name, e-mail and choose the allergens from list below<br>to get the ability of using our service </h1>
+<br>
+<div class="rest_p">
+    <h1 class="h1cadd">Here you could change Restaurant's information</h1>
     <form class="form_add_c" method="post"> 
-        {%csrf_token%}
-            {{form}}
-        <button type="submit"> Update Restaurant </button>
+        {% csrf_token %}
+        {{ form }}
+        <br>
+        <button type="submit">Update Restaurant</button>
     </form>
+</div>
 
 {%endblock content%}

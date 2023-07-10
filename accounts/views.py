@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import DetailView, CreateView
 from django.contrib.auth.forms import UserCreationForm
-from .models import UserProfile
+from django.contrib.auth import login
 from algapp.models import Customer, Restaurant, Menu
 from .forms import ProfileForm
 from django.contrib.auth.decorators import login_required
@@ -46,10 +46,22 @@ def restaurant_profile(request):
     return render(request, 'restaurant_profile.html', context)
 
 
+# class SignUpView(CreateView):
+#     form_class = UserCreationForm
+#     success_url = reverse_lazy('login')
+#     template_name = 'signup.html'
+
 class SignUpView(CreateView):
+
     form_class = UserCreationForm
-    success_url = reverse_lazy('login')
+    success_url = reverse_lazy('create_profile')
     template_name = 'signup.html'
+
+    def form_valid(self, form_class):
+        user = form_class.save()
+        login(self.request, user)
+
+        return redirect(self.success_url)
 
 
 def profile_redirect_view(request):
